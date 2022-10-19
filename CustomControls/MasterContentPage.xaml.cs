@@ -1,3 +1,5 @@
+using System.Windows.Input;
+
 namespace MasterContentPageDemo.CustomControls;
 
 public partial class MasterContentPage : ContentPage
@@ -49,6 +51,19 @@ public partial class MasterContentPage : ContentPage
     {
         get => (string)GetValue(FooterTextProperty);
         set => SetValue(FooterTextProperty, value);
+    }
+
+    public static readonly BindableProperty FooterButtonCommandProperty = BindableProperty.Create(
+        propertyName: nameof(FooterButtonCommand),
+        returnType: typeof(ICommand),
+        defaultBindingMode: BindingMode.TwoWay,
+        declaringType: typeof(MasterContentPage),
+        defaultValue: null);
+
+    public ICommand FooterButtonCommand
+    {
+        get => (Command)base.GetValue(FooterButtonCommandProperty);
+        set => base.SetValue(FooterButtonCommandProperty, value);
     }
 
     #endregion

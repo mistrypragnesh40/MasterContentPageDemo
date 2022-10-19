@@ -5,6 +5,7 @@
              x:Class="MasterContentPageDemo.Views.TestPage"
              HeaderText="{Binding HeaderText}"
              FooterText="{Binding FooterText}"
+             FooterButtonCommand="{Binding NavigateToOtherPageCommand}"
              HeaderLogo="{Binding HeaderLogo}"
              Title="Master Content Page Demo">
     <VerticalStackLayout Spacing="20">

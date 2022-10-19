@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MasterContentPageDemo.ViewModels
 {
@@ -12,10 +13,9 @@ namespace MasterContentPageDemo.ViewModels
     {
 
 
-        [ICommand]
-        public void NavigateToOtherPage()
+        public ICommand NavigateToOtherPageCommand => new Command(() =>
         {
             AppShell.Current.GoToAsync($"{nameof(TestPage1)}");
-        }
+        });
     }
 }

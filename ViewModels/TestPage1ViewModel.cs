@@ -9,5 +9,7 @@ namespace MasterContentPageDemo.ViewModels
     public partial class TestPage1ViewModel : BaseViewModel
     {
 
+
+
     }
 }
